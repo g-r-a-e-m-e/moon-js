@@ -1,22 +1,22 @@
-import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
-import gsap from 'gsap'
-import * as dat from 'dat.gui'
+import * as THREE from 'node_modules/three'
+import { OrbitControls } from 'node_modules/three/examples/jsm/controls/OrbitControls.js'
+// import gsap from 'gsap'
+// import * as dat from 'dat.gui'
 
-/**
- * GUI
- */
-const gui = new dat.GUI()
-const debug_object = {
-    spin: () => 
-    {
-        gsap.to(mesh.rotation, 
-            {
-                duration: 5,
-                y: mesh.rotation.y + Math.PI * 2
-            })
-    }
-}
+// /**
+//  * GUI
+//  */
+// const gui = new dat.GUI()
+// const debug_object = {
+//     spin: () => 
+//     {
+//         gsap.to(mesh.rotation, 
+//             {
+//                 duration: 5,
+//                 y: mesh.rotation.y + Math.PI * 2
+//             })
+//     }
+// }
 
 /**
  * Texture
@@ -43,9 +43,9 @@ const material = new THREE.MeshBasicMaterial({ map: colorTexture })
 const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
 // Debug
-gui
-    .add(debug_object, 'spin')
-    .name('SPIN THE MOON, NERD!!!')
+// gui
+//     .add(debug_object, 'spin')
+//     .name('SPIN THE MOON, NERD!!!')
 
 /**
  * Sizes
